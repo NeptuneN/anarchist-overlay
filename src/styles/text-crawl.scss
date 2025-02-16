@@ -41,13 +41,14 @@
   border-color: transparent;
   color: white;
   line-height: 1;
+}
 
-  .neon {
-    font-family: 'Verdana' !important;
-    font-weight: 400 !important;
-    color: #d9fdff !important;
-    text-shadow: 0 0 2rem #00f0ff !important;
-  }
+// im really bad at this so just spam !important for future non-animated effects
+.neon {
+  font-family: 'Verdana' !important;
+  font-weight: 400 !important;
+  color: #d9fdff !important;
+  text-shadow: 0 0 2rem #00f0ff !important;
 }
 
 $offset: 0.05em;
