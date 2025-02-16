@@ -22,8 +22,7 @@
     <div style="
       width: calc({{textLength}}ch + 6px);
       animation:
-      typing {{typingTime}}s steps({{textLength}}) {{startDelay}}s                  normal backwards,
-      blink  .5s             step-end              {{startDelay}}s {{cursorDelay}} alternate
+      typing {{typingTime}}s steps({{textLength}}) {{startDelay}}s normal backwards, blink .5s step-end {{startDelay}}s {{cursorDelay}} alternate;
       {{#if neonEffect}}
       width: calc({{textLength}}ch + 26px);
       overflow: visible;
