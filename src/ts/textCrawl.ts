@@ -37,7 +37,7 @@ const normalizeConfig = (config: TextCrawlConfig): NormalizedConfig => {
     typingTime: config.typingTime ?? 2,
     delay: config.delay ?? 1,
     blackBars: config.blackBars ?? true,
-    neonEffect: config.neonEffect ?? true,
+    neonEffect: config.neonEffect ?? false,
     lines: config.lines.map(line => ({text: line.text, fontSize: line.fontSize ?? '32px'})),
     glitchEffect: config.glitchEffect ?? false
   };
