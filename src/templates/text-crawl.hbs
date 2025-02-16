@@ -20,22 +20,19 @@
 <div style="margin-left: {{offsetX}}; margin-top: {{offsetY}}; display: flex; flex-direction: column;">
   {{#each lines}}
     <div style="
-      width: calc({{textLength}}ch + 6px);
-      animation:
-      typing {{typingTime}}s steps({{textLength}}) {{startDelay}}s normal backwards, blink .5s step-end {{startDelay}}s {{cursorDelay}} alternate;
+      width: 100%;
       {{#if glitchEffect}}, glitch {{glitchEffect.time}}s infinite{{/if}};
       white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid;
-      font-family: monospace;
+      {{!-- overflow: hidden; --}}
+      border-right: 3px solid; {{!- this is important --}}
+      {{!-- font-family: monospace; {{!- this is not --}} --}}
       text-shadow: 3px 3px 2px black;
       font-size: {{fontSize}};
       border-color: transparent;
       color: white;
       line-height: 1;
       {{#if neonEffect}}
-      {{!-- width: calc({{textLength}}ch + 26px); --}}
-      line-height: 1.1;
+
       {{/if}}
       {{#if glitchEffect}}
         --glitchTime: {{glitchEffect.time}}s;
@@ -49,7 +46,16 @@
       {{/if}}
     >
       {{#if neonEffect}}
-        <span aria-hidden="true">{{text}}</span>
+        <div style="width: fit-content;">
+          <span aria-hidden="true" style="
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          animation: typing {{typingTime}}s steps({{textLength}}) {{startDelay}}s normal backwards, blink .5s step-end {{startDelay}}s {{cursorDelay}} alternate;
+          border-right: 3px solid;
+          border-color: transparent;
+          ">{{text}}</span>
+        </div>
       {{/if}}
       {{#if glitchEffect}}
         <span aria-hidden="true">{{text}}</span>
