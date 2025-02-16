@@ -17,7 +17,7 @@
   <div class="bar bottom"></div>
 {{/if}}
 
-<div style="margin-left: {{offsetX}}; margin-top: {{offsetY}}">
+<div style="margin-left: {{offsetX}}; margin-top: {{offsetY}}; display: flex; flex-direction=: column;">
   {{#each lines}}
     <div style="
       width: calc({{textLength}}ch + 6px);
@@ -34,8 +34,7 @@
       color: white;
       line-height: 1;
       {{#if neonEffect}}
-      width: calc({{textLength}}ch + 26px);
-      overflow: visible;
+      {{!-- width: calc({{textLength}}ch + 26px); --}}
       line-height: 1.1;
       {{/if}}
       {{#if glitchEffect}}
