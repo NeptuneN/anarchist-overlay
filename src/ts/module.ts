@@ -11,7 +11,6 @@ import {createTextCrawlHtml} from "./textCrawl";
 
 Hooks.once('socketlib.ready', () => {
   const module = (game as Game).modules.get(moduleId) as AnarchistOverlayModule;
-
   const socket = setupSocket();
   setupOverlaySocket(socket);
   module.createOverlay = createOverlay(socket);

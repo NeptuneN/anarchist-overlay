@@ -23,8 +23,6 @@ export const setupOverlaySocket = (socket: ModuleSocket) => {
   socket.register('createOverlay', handleOverlayCreation);
 }
 
-
-
 const handleOverlayCreation = async (config: OverlayConfig, html: string) => {
   const normalizedConfig = normalizeConfig(config);
   let template = await renderTemplate(`modules/${moduleId}/templates/overlay.hbs`, normalizedConfig);
