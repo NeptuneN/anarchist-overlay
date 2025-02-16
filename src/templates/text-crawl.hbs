@@ -55,7 +55,9 @@
       {{#if glitchEffect}}
         <span aria-hidden="true">{{text}}</span>
       {{/if}}
-      {{text}}
+      {{#if noEffect}}
+        {{text}}
+      {{/if}}
       {{#if glitchEffect}}
         <span aria-hidden="true">{{text}}</span>
       {{/if}}
