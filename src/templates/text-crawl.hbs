@@ -20,7 +20,7 @@
 <div style="margin-left: {{offsetX}}; margin-top: {{offsetY}}">
   {{#each lines}}
     <div style="
-      {{!-- width: calc({{textLength}}ch + 6px); --}}
+      width: calc({{textLength}}ch + 6px);
       animation:
       typing {{typingTime}}s steps({{textLength}}) {{startDelay}}s normal backwards, blink .5s step-end {{startDelay}}s {{cursorDelay}} alternate;
       {{#if glitchEffect}}, glitch {{glitchEffect.time}}s infinite{{/if}};
@@ -34,7 +34,7 @@
       color: white;
       line-height: 1;
       {{#if neonEffect}}
-      {{!-- width: calc({{textLength}}ch + 26px); --}}
+      width: calc({{textLength}}ch + 26px);
       overflow: visible;
       line-height: 1.1;
       {{/if}}
