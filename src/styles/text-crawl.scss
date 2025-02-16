@@ -41,6 +41,13 @@
   border-color: transparent;
   color: white;
   line-height: 1;
+
+  .neon {
+    font-family: 'Verdana';
+    font-weight: 400;
+    color: #d9fdff;
+    text-shadow: 0 0 2rem #00f0ff;
+  }
 }
 
 $offset: 0.05em;
@@ -49,13 +56,6 @@ $small-offset: $offset * 0.5;
 $red: rgba(255, 0, 0, 0.75);
 $blue: rgba(0, 0, 255, 0.75);
 $green: rgba(0, 255, 0, 0.75);
-
-.neon {
-  font-family: 'Verdana' !important;
-  font-weight: 400 !important;
-  color: #d9fdff !important;
-  text-shadow: 0 0 2rem #00f0ff !important;
-}
 
 .glitch {
   position: relative;
