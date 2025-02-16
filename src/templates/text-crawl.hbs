@@ -24,6 +24,11 @@
       animation:
       typing {{typingTime}}s steps({{textLength}}) {{startDelay}}s                  normal backwards,
       blink  .5s             step-end              {{startDelay}}s {{cursorDelay}} alternate
+      {{#if neonEffect}}
+      width: calc({{textLength}}ch + 26px);
+      overflow: visible;
+      line-height: 1.1;
+      {{/if}}
       {{#if glitchEffect}}, glitch {{glitchEffect.time}}s infinite{{/if}};
       white-space: nowrap;
       overflow: hidden;
@@ -51,7 +56,6 @@
       {{#if glitchEffect}}
         <span aria-hidden="true">{{text}}</span>
       {{/if}}
-      {{text}}
       {{#if glitchEffect}}
         <span aria-hidden="true">{{text}}</span>
       {{/if}}
