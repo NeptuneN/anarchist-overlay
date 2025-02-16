@@ -6,6 +6,7 @@ export type TextCrawlConfig = {
   typingTime?: number;
   delay?: number;
   blackBars?: boolean;
+  neonEffect?: boolean;
   lines: { text: string, fontSize?: string }[];
   glitchEffect?: { time: number } | false;
 };
@@ -22,7 +23,8 @@ export const createTextCrawlHtml = async (config: TextCrawlConfig) => {
       textLength: line.text.length,
       cursorDelay: (normalizedConfig.typingTime + normalizedConfig.delay) * 2,
       startDelay: (normalizedConfig.delay + normalizedConfig.typingTime) * index,
-      glitchEffect: normalizedConfig.glitchEffect
+      glitchEffect: normalizedConfig.glitchEffect,
+      neonEffect: normalizedConfig.neonEffect
     }))
   });
 }
@@ -35,6 +37,7 @@ const normalizeConfig = (config: TextCrawlConfig): NormalizedConfig => {
     typingTime: config.typingTime ?? 2,
     delay: config.delay ?? 1,
     blackBars: config.blackBars ?? true,
+    neonEffect: config.neonEffect ?? false,
     lines: config.lines.map(line => ({text: line.text, fontSize: line.fontSize ?? '32px'})),
     glitchEffect: config.glitchEffect ?? false
   };

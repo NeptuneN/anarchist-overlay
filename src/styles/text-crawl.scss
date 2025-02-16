@@ -50,6 +50,14 @@ $red: rgba(255, 0, 0, 0.75);
 $blue: rgba(0, 0, 255, 0.75);
 $green: rgba(0, 255, 0, 0.75);
 
+.neon {
+  font-family: 'Verdana';
+  font-weight: 400;
+  letter-spacing: -0.18em;
+  color: #d9fdff;
+  text-shadow: 0 0 2rem #00f0ff;
+}
+
 .glitch {
   position: relative;
 
