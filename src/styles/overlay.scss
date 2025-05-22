@@ -16,5 +16,8 @@
   &.block-interactions {
     pointer-events: auto;
   }
+  &.center-field {
+    display: flex;
+    justify-content: center;
+  }
 }
-
