@@ -55,6 +55,11 @@
   }
 }
 
+.center-field {
+  display: flex;
+  justify-content: center;
+}
+
 $offset: 0.05em;
 $big-offset: 2 * $offset;
 $small-offset: $offset * 0.5;
